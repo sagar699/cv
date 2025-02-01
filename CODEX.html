@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            position: relative;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #yes {
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you go out for coffee date with me?❤️</h1>
+    <div class="container">
+        <button id="yes" onclick="alert('Yay! ❤️ Can’t wait for our Coffee date!')">Yes</button>
+        <button id="no" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            let button = document.getElementById("no");
+            let x = Math.random() * window.innerWidth * 0.8;
+            let y = Math.random() * window.innerHeight * 0.8;
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
